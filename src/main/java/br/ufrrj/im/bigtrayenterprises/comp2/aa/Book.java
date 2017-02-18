@@ -1,4 +1,9 @@
-package main.java.br.ufrrj.im.bigtrayenterprises.comp2.aa;
+package br.ufrrj.im.bigtrayenterprises.comp2.aa;
+
+import br.ufrrj.im.bigtrayenterprises.comp2.aa.Characters.Player;
+import br.ufrrj.im.bigtrayenterprises.comp2.aa.Choices.Choice;
+import br.ufrrj.im.bigtrayenterprises.comp2.aa.Events.BlankEvent;
+import br.ufrrj.im.bigtrayenterprises.comp2.aa.Events.Event;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -42,7 +47,7 @@ public class Book {
                 this.eventActually = choice.getNextEvent();
                 this.eventActually.applyHistory(player);
             } else {
-                Event gameOver = new BlankEvent("Game Over", new ArrayList<Choice>());
+                Event gameOver = new BlankEvent(new ArrayList<Choice>(), "Game Over");
                 this.eventActually = gameOver;
             }
 
